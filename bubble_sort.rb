@@ -6,7 +6,7 @@ def bubble_sort(arr)
 
 	while switch == true
 		switch = false
-		(0...n-1) do |i|
+		(n-1).times do |i|
 			if arr[i] > arr[i + 1]
 				arr[i], arr[i + 1] = arr[i + 1], arr[i]
 				switch = true
