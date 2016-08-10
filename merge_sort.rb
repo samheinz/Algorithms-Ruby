@@ -7,7 +7,7 @@ def merge_sort(arr)
     def merge(left, right)
     	sorted_arr = []
     	until left.empty? || right.empty?
-    		if left.first > right.first
+    		if left.first <= right.first
     			sorted_arr << left.shift
     		else
     			sorted_arr << right.shift
@@ -15,6 +15,6 @@ def merge_sort(arr)
     	end
     	sorted_arr.concat(left).concat(right)
     end
-    
+
     merge(merge_sort(left), merge_sort(right))
 end
