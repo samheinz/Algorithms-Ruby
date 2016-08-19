@@ -1,3 +1,3 @@
 def urlify(str)
-	str.gsub!(/\s/, "%20")
+	str.lstrip!.rstrip!.gsub!(/\s/, "%20")
 end
